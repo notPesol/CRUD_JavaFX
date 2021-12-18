@@ -43,6 +43,8 @@ public class MainController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         System.out.println("init method");
         idField.setDisable(true);
+        buttonUpdate.setDisable(true);
+        buttonDelete.setDisable(true);
         buttonClear.setDisable(true);
         showProducts();
     }
@@ -251,6 +253,8 @@ public class MainController implements Initializable {
     private void setButton() {
         buttonAdd.setDisable(isOnUpdate);
         buttonClear.setDisable(!isOnUpdate);
+        buttonUpdate.setDisable(!isOnUpdate);
+        buttonDelete.setDisable(!isOnUpdate);
     }
 
 
